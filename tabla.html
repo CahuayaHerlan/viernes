@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title></title>
+<script lang="javascript" type="text/javascript">
+    function suma() {
+        var n1 = document.formu.op1.value;
+        var n2 = document.formu.op2.value;
+        var a = parseFloat(n1);
+        var b = parseFloat(n2);
+        var s = a + b;
+        document.formu.resultado.value = s;
+    }
+    function resta(){
+        var n1 = document.formu.op1.value;
+        var n2 = document.formu.op2.value;
+        var a = parseFloat(n1);
+        var b = parseFloat(n2);
+        var r = a - b;
+        document.formu.resultado.value = r;
+    }
+
+    function producto(){
+        var n1 = document.formu.op1.value;
+        var n2 = document.formu.op2.value;
+        var a = parseFloat(n1);
+        var b = parseFloat(n2);
+        var p = a * b;
+        document.formu.resultado.value = p;
+    }
+
+    function division(){
+        var n1 = document.formu.op1.value;
+        var n2 = document.formu.op2.value;
+        var a = parseFloat(n1);
+        var b = parseFloat(n2);
+        var d = a / b;
+        document.formu.resultado.value = d;
+    }
+
+    function porcentaje(){
+        var n1 = document.formu.op1.value;
+        var n2 = document.formu.op2.value;
+        var a = parseFloat(n1);
+        var b = parseFloat(n2);
+        var po = a * b
+        var porcentaje = po / 100
+        document.formu.resultado.value = porcentaje;
+    }
+
+    function factorial() {
+        var n = parseFloat(document.formu.op1.value);
+        var f = factorial(n);
+        document.formu.resultado.value = f;
+    }
+
+    function factorial(num) {
+        if (num === 0 || num === 1) {
+            return 1;
+        }
+        for (var i = num - 1; i >= 1; i--) {
+            num *= i;
+        }
+        return num;
+    }
+
+    
+</script>
+</head>
+<body>
+<form name="formu">
+    <table border="1" align="center">
+        <tr>
+            <td rowspan="6">
+                <input type="button" value="suma" onclick="suma();"><br />
+                <input type="button" value="resta" onclick="resta();"><br />
+                <input type="button" value="producto" onclick="producto();"><br />
+                <input type="button" value="division" onclick="division();"><br />
+                <input type="button" value="porcentaje" onclick="porcentaje('usa primero el porcentaje');"><br />
+                <input type="button" value="factorial" onclick="factorial();"><br />
+            </td>
+            <td>x</td>
+            <td><input type="text" name="op1"></td>
+        </tr>
+        <tr>
+            
+            <td>y</td>
+            <td><input type="text" name="op2"></td>
+        </tr>
+        <tr>
+            
+            <td>res</td>
+            <td><input type="text" name="resultado"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
